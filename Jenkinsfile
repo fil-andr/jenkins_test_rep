@@ -10,9 +10,9 @@ pipeline {
 		}
 		stage ('stop and rm container and image') {
 			steps{
-				sh '/bin/bash /docker_test/get_row_from_db/scripts/stop_conteiner_get_row.sh'
+				sh '/bin/bash /docker_test/get_row_from_db/app_dev/stop_container_get_row.sh'
 				sh 'docker rm get_row_from_db_get_row_1'
-				sh '/bin/bash /docker_test/get_row_from_db/scripts/rm_img_if_exist.sh'
+				sh '/bin/bash /docker_test/get_row_from_db/app_dev/rm_img_if_exist.sh'
 				}
 		}
 		stage ('build new image') {
