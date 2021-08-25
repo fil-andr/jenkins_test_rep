@@ -26,7 +26,7 @@ def db_select(id_num):
         d = session_postg.query(Company).filter_by(id=id_num).one()
     except sa.exc.NoResultFound:
         return f'no row with id: {id_num}'
-    return f'---TEST Message 20_08_2021  name: {d.name}, salary: {d.salary}'
+    return f'---TEST Message 25_08_2021  name: {d.name}, salary: {d.salary}'
 
 
 bot = telebot.TeleBot(os.environ['TEL_KEY'])
